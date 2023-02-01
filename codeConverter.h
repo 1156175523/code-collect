@@ -128,7 +128,7 @@ public:
         char dstutf8[CODE_MAX_DATA_LEN];
         memset(dstutf8, 0x00, sizeof(dstutf8));
 
-        int minLen = srcStr.size() > CODE_MAX_DATA_LEN ? CODE_MAX_DATA_LEN : srcStr.size();
+        size_t minLen = srcStr.size() > CODE_MAX_DATA_LEN ? CODE_MAX_DATA_LEN : srcStr.size();
         char* pSrcTmp = (char*)malloc(sizeof(char)*(minLen+1));
         if (pSrcTmp == NULL){
             return retStr;
@@ -182,7 +182,7 @@ public:
         char dstgbk[CODE_MAX_DATA_LEN];
         memset(dstgbk, 0x00, sizeof(dstgbk));
 
-        int minLen = srcStr.size() > CODE_MAX_DATA_LEN ? CODE_MAX_DATA_LEN : srcStr.size();
+        size_t minLen = srcStr.size() > CODE_MAX_DATA_LEN ? CODE_MAX_DATA_LEN : srcStr.size();
         char* pSrcTmp = (char*)malloc(sizeof(char)*(minLen+1));
         if (pSrcTmp == NULL){
             return retStr;
